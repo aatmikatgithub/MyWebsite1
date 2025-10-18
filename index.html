@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MY WEBPAGE!</title>
+<link rel="icon" type="image/jpg" href="file:///C:/html2/favicon.webp">
+<style>
+button {
+  font-size: 16px;
+  background-color: #ff0303;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #00ff44;
+}
+
+.video-container {
+  position: relative; 
+  width: 600px;
+  height: 300px;
+  margin: 20px auto;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  border: 3px solid black;
+  border-radius: 10px;
+  display: block;
+}
+
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  padding: 12px 24px;
+  opacity: 0;
+  pointer-events: none;  
+  transition: opacity 0.3s ease;
+}
+
+.video-container:hover .play-btn {
+  opacity: 1;
+  pointer-events: auto; 
+}
+</style>
+</head>
+
+<body>
+<h1>WELCOME!</h1><hr>
+<h2>I AM AATMIK.</h2><hr>
+
+<a href="https://www.youtube.com/@SIGMABLOX19" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png" height="250" width="400" title="Opens My Youtube Channel!">
+</a>
+<hr>
+<h1>This Is Madara Uchiha!</h1>
+<a href="https://en.wikipedia.org/wiki/Madara_Uchiha" target="_blank" 
+title="Opens Madara Uchiha Wikipedia Page.">
+<img src="https://cdn.shopify.com/s/files/1/0785/4004/6646/files/39349af71e44acd05f7ff09cf78eed5d_480x480.jpg?v=1727177811" height="300" width="200" alt="This Is a Picture Of Madara Uchiha!">
+</a><br><hr>
+
+<h2>My Favourite Phonk!</h2>
+<audio id="bgmusic" controls loop>
+  <source src="C:\html2\FUNK SIGILO SLOWED.mp3" type="audio/mpeg">
+</audio>
+<hr>
+
+<h2>One Of My Donation Videos!</h2>
+<div class="video-container">
+  <video id="myVideo" preload="metadata" controls>
+    <source src="C:\html2\VID2.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <button class="play-btn" onclick="playVideo()"> ▶</button>
+</div>
+
+<script>
+  const video = document.getElementById("myVideo");
+  const playButton = document.querySelector(".play-btn");
+
+  function playVideo() {
+    video.play();
+  }
+
+  // Hide play button when video plays
+  video.addEventListener("play", () => {
+    playButton.style.opacity = "0";
+    playButton.style.pointerEvents = "none";
+  });
+
+  // Show again when paused
+  video.addEventListener("pause", () => {
+    playButton.style.opacity = "1";
+    playButton.style.pointerEvents = "auto";
+  });
+</script>
+</body>
+</html>
