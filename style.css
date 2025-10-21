@@ -177,11 +177,11 @@ span {
 }
 
 @keyframes words {
-  0%, 20% { content: "Web Developer"; }
-  21%, 40% { content: "Software Developer"; }
-  41%, 60% { content: "Web Designer"; }
-  61%, 80% { content: "Youtuber"; }
-  81%, 100% { content: "Script Writer"; }
+  0%, 20% { content: " Web Developer"; }
+  21%, 40% { content: " Software Developer"; }
+  41%, 60% { content: " Web Designer"; }
+  61%, 80% { content: " Youtuber"; }
+  81%, 100% { content: " Script Writer"; }
 }
 
 /* ===== Responsive ===== */
@@ -206,3 +206,4 @@ span {
     margin-left: 3rem;
   }
 }
+
